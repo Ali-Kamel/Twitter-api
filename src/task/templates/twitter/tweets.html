@@ -1,0 +1,45 @@
+{% extends "twitter/base.html" %}
+
+	{% block content %}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-3">
+            <form action="" class="search-form">
+            	{% csrf_token %}
+                <div class="form-group has-feedback">
+            		<label for="search" class="sr-only">Search</label>
+            		<input type="text" class="form-control" name="search" id="search" placeholder="search">
+              		<span class="glyphicon glyphicon-search form-control-feedback"></span>
+            	</div>
+            </form>
+        </div>
+    </div>
+</div>
+  <a href="{% url 'logout' %}" class="btn btn-info btn-sm">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a> 
+	<blockquote class="twitter-tweet">
+		<div id="container">
+			{% for tweet in public_tweets %}
+			<img src="{{tweet.user.profile_image_url}}" />
+			<small>
+				{{tweet.user.name}}@{{tweet.user.screen_name}}
+			</small>
+			 <p>
+			 	{{tweet.text}}
+			 	<hr>
+			 </p>
+			 <br>
+			 {% endfor %}
+		</div>
+	</blockquote>
+		
+
+	{% endblock %}

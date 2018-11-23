@@ -1,0 +1,27 @@
+*
+* This work is licensed under the Creative Commons Attribution 3.0 Unported License. 
+* To view a copy of this license, visit http://creativecommons.org/licenses/by/3.0/
+*
+
+This project contains a basic implementation of a Django project (DjTweepy) with an app 'twitter_auth'. 
+The 'twitter_auth' app uses Tweepy and OAuth to authenticate with Twitter, so can be extended to create twitter web apps.
+
+To use:
+
+Python Version 3.6 or higher !
+
+1. Download, extract files.
+2. Edit settings.py for your database settings
+3. Edit utils.py to add your twitter app Consumer Key and Consumer Secret
+4. Run pip install -r Requirments.text
+5. Run python manage.py syncdb
+6. Run python manage.py runserver
+7. ???
+8. Profit!
+
+Note: this app is set up for development not production.
+
+Note 2: please feel free to send me feedback about the Code and e-mail me back if there anything that didn't match
+your Requirments,
+
+Thanks you for the opportunity.
